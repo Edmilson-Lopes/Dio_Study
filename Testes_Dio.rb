@@ -1,21 +1,12 @@
 
-
 class Pessoa
-    def initialize(nome)
-        @nome = nome
-    end
 
+    def self.gerar
+        p "vou fazer algo antes"
+        Pessoa.new
+    end
 end
 
-ellie = Pessoa.new("ellie")
+pessoa = Pessoa.gerar
 
-abby = Pessoa.new("abby")
-
-p ellie 
-
-p abby
-
-
-
-
-
+p pessoa
