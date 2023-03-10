@@ -1,13 +1,36 @@
-require "./Classes/pessoa"
-require "./Classes/carro"
-require "awesome_print"
+
+class Sensor
+    def instalar 
+        p "Estou instalando o sensor"
+
+    end
+
+    def iniciar
+        p "Estou iniciando o sensor"
+    end
+
+    def coletar_métricas
+        p "Estou coletando as métricas"
+        p "Estou analisando as métricas"
+    end 
+
+end
 
 
-puts "Estou executando nosso código"
+class SensorTemperatura < Sensor
+    def coletar_métricas
+        super
+        
+        p "Estou analisando a temperatura das métricas"
 
-foo = Pessoa.new("Foo")
-carro = Carro.new("modelo", foo)
+    end
+
+end
+
+ sensor = SensorTemperatura.new
+ sensor.instalar
+ sensor.iniciar
+ sensor.coletar_métricas   
 
 
-ap foo
-ap carro
+
