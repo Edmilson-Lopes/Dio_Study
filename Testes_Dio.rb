@@ -1,16 +1,10 @@
 
-# principal.rb
-
-require "./classes/Conta_bancaria"
+# Classes
 
 
-conta_cadu = ContaBancaria.new("cadu", 100)
-conta_pessoa2 = ContaBancaria.new("pessoa2", 200)
+class MinhaClasse
 
-conta_cadu.transferir(conta_pessoa2, 50)
+end
 
-p "Conta Cadu"
-p conta_cadu.saldo
 
-p "Conta Pessoa 2"
-p conta_pessoa2.saldo
+objeto = MinhaClasse.new
