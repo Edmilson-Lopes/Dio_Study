@@ -1,20 +1,35 @@
+# Algorítimo de procura linear
 
 
-class Pessoa
-    def initialize(nome)
-        @nome = nome
+def linear_search(array, numero_alvo)
+   
+    for index in 0..array.length-1 do 
+        if array[index] == numero_alvo 
+            return index
+        end
+
     end
 
-    def imprimir_ola
-        puts "olá #{@nome}"
-    end
+    return -1
+
+end
+
+
+array = [1, 5, 9, 13, 15, 23, 27, 30]
+
+numero_alvo = 15
+
+resultado = linear_search(array, numero_alvo)
+
+if resultado == -1
+    puts "O número #{numero_alvo} não está na lista"
+
+else
+    puts "O número #{numero_alvo} está na lista"
+
 end
 
 
 
-cadu = Pessoa.new("cadu")
 
-pessoa2 = Pessoa.new("pessoa")
 
-cadu.imprimir_ola
-pessoa2.imprimir_ola
