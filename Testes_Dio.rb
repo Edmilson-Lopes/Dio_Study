@@ -1,11 +1,27 @@
-# Algorítimo de procura linear
+# Algoritimo de procura binária
+
+array = [5, 10, 12, 15, 30, 45, 60, 80, 100]
+
+numero_alvo = 100
 
 
-def linear_search(array, numero_alvo)
-   
-    for index in 0..array.length-1 do 
-        if array[index] == numero_alvo 
-            return index
+def binary_search(array, numero_alvo)
+
+    left = 0
+
+    right = array.length-1
+
+    while left <= right
+        mid = (left + right) / 2
+
+        if array[mid] == numero_alvo 
+            return mid
+
+        elsif array[mid] < numero_alvo
+            left = mid +1
+
+        else 
+            right = mid -1
         end
 
     end
@@ -14,22 +30,12 @@ def linear_search(array, numero_alvo)
 
 end
 
-
-array = [1, 5, 9, 13, 15, 23, 27, 30]
-
-numero_alvo = 15
-
-resultado = linear_search(array, numero_alvo)
+resultado = binary_search(array, numero_alvo)
 
 if resultado == -1
-    puts "O número #{numero_alvo} não está na lista"
+    puts "O número não está na lista"
 
 else
-    puts "O número #{numero_alvo} está na lista"
+    puts "O número está no índice #{resultado} da lista"
 
 end
-
-
-
-
-
