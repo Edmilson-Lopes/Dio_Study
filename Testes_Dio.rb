@@ -2,7 +2,7 @@
 
 array = [5, 10, 12, 15, 30, 45, 60, 80, 100]
 
-numero_alvo = 100
+numero_alvo = 12
 
 
 def binary_search(array, numero_alvo)
