@@ -1,27 +1,44 @@
 
-class ContaBancaria
-    def initialize(proprietario, valor_inicial)
-        @proprietario = proprietario
-        @valor        = valor_inicial
-    end
+# Binary Search
 
-    def transferir (outra_conta, valor)
-        if saldo >= valor 
-        debitar(valor)
+
+arr = [5, 10, 12, 18, 25, 33, 61, 73, 90]
+
+target = 90 
+
+
+
+def binary_search(arr, target)
+
+    left = 0
+    right = arr.length-1
+    
+
+    while left <= right
+        mid = (left + right) / 2
+
+        if arr[mid] == target
+            return mid
+
+        elsif arr[mid] < target
+            left = mid +1
+
         else
-            p "Não consigo transferir, saldo insufiviente"
+            right = mid -1
+        end
     end
 
-    def saldo
-        @valor
-    end
+return -1 
 
 end
 
-private 
+resultado = binary_search(arr, target)
 
-def debitar(valor)
-    @valor -= valor 
+if resultado == -1 
+    p "O número não foi encontrado na lista."
+
+else 
+    p "O número foi encontrado no índice #{resultado} da lista."
 end
 
 
